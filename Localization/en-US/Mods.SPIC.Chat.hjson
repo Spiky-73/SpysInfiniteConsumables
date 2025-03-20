@@ -5,8 +5,8 @@ ModName: Spy's Infinite Consumables
 ModNameShort: SPIC
 Homepage: homepage
 Workshop: Steam Workshop page
-Version: 4.0.0.2
-Summary: Known bugs with falling blocks were fixed
+Version: 4.0.0.3
+Summary: ""
 Details:
 	'''
 	After 3+ years of work (and 3 complete reworks), SPIC is finally finished!
@@ -17,8 +17,4 @@ Details:
 
 	Small sidenote, I you are a mod developer and want to add new Infinities there's an API you can use the create Infinities, Presets and Displays.
 	'''
-Changelog:
-	'''
-	- Fixed falling blocks dropping items when landing on background objects
-	- Fixed falling blocks infinite data not been cleared when falling when placed
-	'''
+Changelog: - Ported to tML v2025.01
