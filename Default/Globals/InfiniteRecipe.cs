@@ -15,11 +15,12 @@ public class InfiniteRecipe : ModSystem {
         CraftingStations.Clear();
         foreach (Recipe recipe in Main.recipe) {
             foreach (int t in recipe.requiredTile) CraftingStations.Add(t);
-            recipe.AddConsumeItemCallback(OnItemConsume);
+            recipe.AddConsumeIngredientCallback(OnItemConsume);
         }
     }
 
-    public static void OnItemConsume(Recipe recipe, int type, ref int amount) {
+    public static void OnItemConsume(Recipe recipe, int type, ref int amount, bool isDecrafting) {
+        if (isDecrafting) return;
         if(MagicStorageIntegration.Enabled && MagicStorageIntegration.Version.CompareTo(new(0,5,7,9)) <= 0 && MagicStorageIntegration.InMagicStorage(Main.LocalPlayer)) return;
         if (Main.LocalPlayer.HasInfinite(type, amount, Material.Instance)) {
             amount = 0;

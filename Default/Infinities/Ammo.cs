@@ -4,7 +4,6 @@ using SPIC.Configs;
 using System.Collections.Generic;
 using Terraria.ModLoader;
 using SpikysLib;
-using SpikysLib.Constants;
 using SPIC.Default.Displays;
 using Terraria.ModLoader.Config;
 using SpikysLib.Configs.UI;
