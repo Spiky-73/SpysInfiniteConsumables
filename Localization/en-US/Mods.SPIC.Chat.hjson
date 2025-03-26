@@ -5,16 +5,7 @@ ModName: Spy's Infinite Consumables
 ModNameShort: SPIC
 Homepage: homepage
 Workshop: Steam Workshop page
-Version: 4.0.0.3
+Version: 4.0.0.4
 Summary: ""
-Details:
-	'''
-	After 3+ years of work (and 3 complete reworks), SPIC is finally finished!
-	Thank you for downloading and using this over-engineered mod of mine.
-
-	v4.0 is (probably) the last major update this mod will have.
-	I will still maintain the mod and release patches when needed but I implemented everything I planned to.
-
-	Small sidenote, I you are a mod developer and want to add new Infinities there's an API you can use the create Infinities, Presets and Displays.
-	'''
-Changelog: - Ported to tML v2025.01
+Details: ""
+Changelog: - Fixed PostAddRecipes used instead of PostSetupRecipes

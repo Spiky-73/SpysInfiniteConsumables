@@ -11,7 +11,7 @@ public class InfiniteRecipe : ModSystem {
 
     public static readonly HashSet<int> CraftingStations = new();
 
-    public override void PostAddRecipes() {
+    public override void PostSetupRecipes() {
         CraftingStations.Clear();
         foreach (Recipe recipe in Main.recipe) {
             foreach (int t in recipe.requiredTile) CraftingStations.Add(t);
