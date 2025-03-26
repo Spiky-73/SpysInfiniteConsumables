@@ -9,6 +9,7 @@ public sealed class Version : ModConfig {
     [DefaultValue(""), JsonProperty] internal string lastPlayedVersion = "";
 
     [Header("Info")]
+    [JsonIgnore, ShowDespiteJsonIgnore] public Text? Stable;
     [JsonIgnore, ShowDespiteJsonIgnore] public Text? Summary;
     [JsonIgnore, ShowDespiteJsonIgnore] public Text? Details;
     [JsonIgnore, ShowDespiteJsonIgnore] public Text? Bug;

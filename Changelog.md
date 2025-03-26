@@ -1,6 +1,9 @@
 
 # SPIC Changelog
 
+## v4.0.0.4
+- Fixed PostAddRecipes used instead of PostSetupRecipes
+
 ## v4.0.0.3
 - Ported to tML v2025.01
 
