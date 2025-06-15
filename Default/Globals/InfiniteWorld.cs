@@ -33,6 +33,13 @@ public class InfiniteWorld : ModSystem {
     public Player? contextPlayer;
     public Projectile? contextProjectile;
 
+    public override void PostSetupRecipes() {
+        for (int t = 0; t < ItemLoader.ItemCount; t++) {
+            Item i = new(t);
+            if (i.tileWand != -1) Placeable.RegisterWand(i);
+        }
+    }
+
     public bool IsInfinitePlacementContext() {
         if (contextPlayer is not null) {
             Item item = contextPlayer.HeldItem;

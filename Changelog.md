@@ -1,6 +1,10 @@
 
 # SPIC Changelog
 
+## v4.0.0.5
+- Fixed Placeable wands setup called before all items are setup (Spirit Reforged)
+- Fixed HookPayCurrency failing when called and the player is not talking to an NPC (Calamity's Midas Prime)
+
 ## v4.0.0.4
 - Fixed PostAddRecipes used instead of PostSetupRecipes
 

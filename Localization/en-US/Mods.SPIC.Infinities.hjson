@@ -87,7 +87,7 @@ JourneySacrifice: {
 	Tooltip:
 		'''
 		Journey mode research
-		The requirement can be used outside of Journey mode there are unused infinities
+		The requirement can be used outside of Journey mode if there are unused infinities
 		'''
 	TooltipLine: Research
 
@@ -138,7 +138,6 @@ Placeable: {
 	DisplayName: Placeable
 	Label: "[i:3061] {$Mods.SPIC.Infinities.Placeable.DisplayName}"
 	Tooltip: Items placed in the world
-	TileDuplication: Exact Infinity
 	None.Label: None
 
 	Tile: {
@@ -270,7 +269,7 @@ Nurse: {
 Purchase: {
 	DisplayName: Purchase
 	Label: "[i:1978] {$Mods.SPIC.Infinities.Purchase.DisplayName}"
-	Tooltip: ""
+	Tooltip: Any spending that does not fit the other categories
 }
 
 Reforging: {

@@ -5,7 +5,11 @@ ModName: Spy's Infinite Consumables
 ModNameShort: SPIC
 Homepage: homepage
 Workshop: Steam Workshop page
-Version: 4.0.0.4
+Version: 4.0.0.5
 Summary: ""
 Details: ""
-Changelog: - Fixed PostAddRecipes used instead of PostSetupRecipes
+Changelog:
+	'''
+	- Fixed Placeable wands setup called before all items are setup (Spirit Reforged)
+	- Fixed HookPayCurrency failing when called and the player is not talking to an NPC (Calamity's Midas Prime)
+	'''
