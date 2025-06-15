@@ -51,13 +51,13 @@ public sealed class PlaceableRequirements {
     public Toggle<PreventItemDuplication> preventItemDuplication = new(true);
 }
 
+public sealed class PreventItemDuplication {
+    [DefaultValue(true)] public bool allowMiscDrops = true;
+}
+
 [CustomModConfigItem(typeof(ObjectMembersElement))]
 public sealed class PlaceableDisplay {
     public bool infiniteTooltip;
-}
-
-public sealed class PreventItemDuplication {
-    [DefaultValue(true)] public bool allowMiscDrops = true;
 }
 
 public sealed class Placeable : Infinity<Item, PlaceableCategory>, IConfigProvider<PlaceableRequirements>, IClientConfigProvider<PlaceableDisplay>, ITooltipLineDisplay {
@@ -73,13 +73,6 @@ public sealed class Placeable : Infinity<Item, PlaceableCategory>, IConfigProvid
     public override void Load() {
         IL_Player.PlaceThing_Tiles_PlaceIt_ConsumeFlexibleWandMaterial += IL_FixConsumeFlexibleWand;
         base.Load();
-    }
-
-    public override void SetStaticDefaults() {
-        for (int t = 0; t < ItemLoader.ItemCount; t++) {
-            Item i = new(t);
-            if (i.tileWand != -1) RegisterWand(i);
-        }
     }
 
     private static void IL_FixConsumeFlexibleWand(ILContext il) {

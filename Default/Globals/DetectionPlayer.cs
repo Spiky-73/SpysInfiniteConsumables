@@ -23,7 +23,7 @@ public sealed class DetectionPlayer : ModPlayer {
 
     private bool HookPayCurrency(On_Player.orig_PayCurrency orig, Player self, long price, int customCurrency) {
         Infinity<int> infinity;
-        if (Main.npc[Main.player[Main.myPlayer].talkNPC].type == NPCID.Nurse) infinity = Nurse.Instance;
+        if (Main.LocalPlayer.talkNPC >= 0 && Main.npc[Main.LocalPlayer.talkNPC].type == NPCID.Nurse) infinity = Nurse.Instance;
         else if (Main.InReforgeMenu) infinity = Reforging.Instance;
         else if (Main.npcShop != 0) infinity = Shop.Instance;
         else infinity = Purchase.Instance;
